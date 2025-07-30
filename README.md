@@ -2,8 +2,11 @@
 
 A modern, privacy-focused URL shortener designed for simplicity and speed. Shrinkr provides hassle-free, secure, and beautiful link sharing for everyone—no logins, no clutter, just pure utility.
 
-![Shrinkr Homepage](image.png)
-![Shrinkr Shorten Page](screenshots/shorten-page.png)
+### Home page
+![alt text](image.png)
+
+### Shorten Url page
+![alt text](image-1.png)
 
 ## ✨ Features
 
@@ -22,7 +25,7 @@ A modern, privacy-focused URL shortener designed for simplicity and speed. Shrin
 - **Database:** MongoDB
 - **Styling:** Tailwind CSS with custom glassmorphism effects
 - **Font:** Poppins (Google Fonts)
-- **Deployment:** Vercel 
+- **Deployment:** Vercel (recommended)
 
 ## 🚀 Getting Started
 
@@ -66,7 +69,7 @@ A modern, privacy-focused URL shortener designed for simplicity and speed. Shrin
 
 1. Navigate to the **Shorten** page
 2. Enter your long URL in the first input field
-3. (Optional) Enter a custom short URL in the second field
+3. Enter your custom short memorable URL in the second field
 4. Click **Shorten** to generate your short URL
 5. Copy and share your new short URL!
 
@@ -141,18 +144,8 @@ MONGODB_URI=your_production_mongodb_uri
 NEXT_PUBLIC_HOST=https://your-domain.com
 ```
 
-## 🤝 Contributing
-
-We welcome contributions! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 ## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 
