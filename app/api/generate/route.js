@@ -1,5 +1,6 @@
 import clientPromise from "@/lib/mongodb";
 import { NextResponse } from "next/server";
+
 export async function POST(req) {
     const body = await req.json();
     const client = await clientPromise;
@@ -9,7 +10,11 @@ export async function POST(req) {
     //check if shorturl already exists
     const existingUrl = await collection.findOne({shortUrl: body.shorturl});
     if (existingUrl) {
-        return NextResponse.json({error: "Short URL already exists"}, {status: 400});
+        return NextResponse.json({
+            message: "Short URL already exists",
+            existingShortUrl: `${process.env.NEXT_PUBLIC_HOST}/${existingUrl.shortUrl}`,
+            originalUrl: existingUrl.url
+        });
     }
 
     //generate short url

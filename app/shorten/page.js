@@ -30,6 +30,11 @@ const Shorten = () => {
       .then((result) => {
         if (result.error) {
           alert(result.error);
+        } else if (result.message && result.message === "Short URL already exists") {
+          alert("Short URL already exists!");
+          setGenerated(result.existingShortUrl);
+          setUrl("");
+          setShortUrl("");
         } else {
           alert("Short URL generated successfully");
           setGenerated(`${process.env.NEXT_PUBLIC_HOST}/${shortUrl}`);
